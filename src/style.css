@@ -1,7 +1,12 @@
 body {
-  background: #c06c84;
+  background: #8bb23c;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  margin: 120px auto;
+  max-width: 600px;
 }
 
 h1 {
@@ -19,22 +24,19 @@ form {
   display: flex;
 }
 
-.container {
-  margin: 120px auto;
-  max-width: 600px;
-}
-
 .topic {
   width: 70%;
-  padding: 10px;
+  padding: 12px;
   border-radius: 50px;
   border: 1px solid rgba(39, 33, 66, 0.5);
   font-size: 14px;
+  line-height: 120%;
 }
 
 .submit {
+  line-height: 120%;
   width: 100px;
-  padding: 10px;
+  padding: 12px;
   border-radius: 50px;
   border: 1px solid rgba(39, 33, 66, 0.5);
   font-size: 14px;
@@ -49,6 +51,7 @@ form {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  line-height: 1.5;
 }
 footer {
   color: #4b3f57;

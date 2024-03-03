@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Motivation Quotes</title>
@@ -9,10 +11,10 @@
   <body>
     <div class="container">
       <header>
-        <h1>Welcome to Finja's AI Motivation Quotes</h1>
+        <h1>Welcome to Finja's AI Motivation Quote-Generator</h1>
       </header>
       <main>
-        <form action="">
+        <form id="enter-topic">
           <input
             type="text"
             placeholder="Enter the topic of the motivation quote"
@@ -23,7 +25,9 @@
           />
           <input type="submit" class="submit" />
         </form>
-        <div class="quote">Here the Motivation Quote will be displayed</div>
+        <div class="quote" id="poem-container">
+          Here the Motivation Quote will be displayed
+        </div>
       </main>
       <footer>
         This AI Motivation Quote Builder was coded by
