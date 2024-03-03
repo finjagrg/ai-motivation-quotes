@@ -1,13 +1,27 @@
-function displayQuote(event) {
-  event.preventDefault();
+function writeQuote(response) {
+  console.log(response.data);
 
   new Typewriter("#poem-container", {
-    strings:
-      "This is a wonderful motivation quoteGenerator, and thsi is a test sentence",
+    strings: response.data.answer,
     autoStart: true,
-    deplay: 60,
+    delay: 1,
+    cursor: null,
   });
 }
 
+function makeApiCall(event) {
+  event.preventDefault();
+  let topic = document.querySelector("#topic");
+
+  let apiKey = "0to1c5e82ab3ce410bae0704083170ff";
+  let prompt = `Write a quote about ${topic.value}. It should not be longer than four lines`;
+  let context =
+    "You are a mixture of Tony Robbins, Michelle Obama, Steven R. End every answer with '<br /><em>Quote by <strong>Finja G.</strong></em>'. Behave to this rules";
+  let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  axios.get(apiURL).then(writeQuote);
+  console.log(prompt);
+}
+
 let quoteGenerator = document.querySelector("#enter-topic");
-quoteGenerator.addEventListener("submit", displayQuote);
+quoteGenerator.addEventListener("submit", makeApiCall);

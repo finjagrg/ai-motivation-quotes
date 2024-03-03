@@ -11,8 +11,9 @@ body {
 
 h1 {
   font-size: 25px;
-  margin: 0px 30px 50px 30px;
+  margin: 0px 20px 50px 30px;
   color: #4b3f57;
+  width: 100%;
 }
 
 form {
@@ -51,7 +52,7 @@ form {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  line-height: 1.5;
+  line-height: 2.5;
 }
 footer {
   color: #4b3f57;

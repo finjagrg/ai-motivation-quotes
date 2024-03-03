@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Motivation Quotes</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Welcome to Finja's AI Motivation Quote-Generator</h1>
+        <h1>AI Motivation Quote-Generator</h1>
       </header>
       <main>
         <form id="enter-topic">
@@ -22,6 +24,7 @@
             required
             autocomplete="off"
             class="topic"
+            id="topic"
           />
           <input type="submit" class="submit" />
         </form>
